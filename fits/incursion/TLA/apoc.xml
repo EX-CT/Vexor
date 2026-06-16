@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>apoc</url>
+
+<name lang="en">DPS</name>
+<name lang="zh">便宜DPS</name>
+
+<description lang="en">Standard logistics configuration for Incursion fleet. Provides reliable remote repping and capacitor support.</description>
+<description lang="zh">侵舰队标准后勤配置。提供可靠的远程维修和电容支持。</description>
+
+<branch>
+<bname lang="en">Main</bname>
+<bname lang="zh">主线</bname>
+
+<alert lang="en">3 repair on!</alert>
+<alert lang="zh">要求3摇修永动！</alert>
+
+<fit version="1">
+[Apocalypse Navy Issue]
+[low]
+Damage Control II
+Multispectrum Energized Membrane II
+Multispectrum Energized Membrane II
+1600mm Steel Plates II #
+Centum C-Type Kinetic Energized Membrane
+Centum C-Type Explosive Energized Membrane
+Heat Sink II
+Heat Sink II
+[med]
+F-12 Enduring Tracking Computer
+F-12 Enduring Tracking Computer
+Alumel-Wired Enduring Sensor Booster
+Alumel-Wired Enduring Sensor Booster
+[high]
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+Mega Modulated Pulse Energy Beam I
+[rig]
+Large Energy Discharge Elutriation II
+Large Thermal Armor Reinforcer I
+Large Energy Collision Accelerator I
+[drone]
+Imperial Navy Acolyte x5
+[cargo]
+Imperial Navy Multifrequency L x40
+Imperial Navy Xray L x20
+Scan Resolution Script x2
+Optimal Range Script x2
+Tracking Speed Script x2
+Sensor Booster II x2
+Tracking Computer II x2
+</fit>
+</branch>
+
+<branch>
+<bname lang="en">Elite</bname>
+<bname lang="zh">精英</bname>
+
+<note lang="en">Expensive</note>
+<note lang="zh">更贵的精英版本</note>
+
+<fit version="1">
+[Apocalypse Navy Issue]
+[low]
+Damage Control II
+Multispectrum Energized Membrane II
+Multispectrum Energized Membrane II
+1600mm Steel Plates II
+Centum C-Type Kinetic Energized Membrane
+Centum C-Type Explosive Energized Membrane
+Heat Sink II
+Heat Sink II
+[med]
+Parallel Enduring Target Painter
+Tracking Computer II, Optimal Range Script
+Sensor Booster II
+Sensor Booster II
+[high]
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+Mega Pulse Laser II, Conflagration L
+[rig]
+Large Energy Discharge Elutriation II
+Large Thermal Armor Reinforcer I
+Large Energy Collision Accelerator I
+[drone]
+Imperial Navy Acolyte x5
+[cargo]
+Conflagration L x40
+Scorch L x40
+Imperial Navy Multifrequency L x20
+Scan Resolution Script x2
+Optimal Range Script x2
+Tracking Speed Script x2
+[imp]
+Mid-grade Amulet Alpha
+Mid-grade Amulet Beta
+Mid-grade Amulet Gamma
+Mid-grade Amulet Delta
+Mid-grade Amulet Epsilon
+Mid-grade Amulet Omega
+</fit>
+
+</branch>
+</root>
