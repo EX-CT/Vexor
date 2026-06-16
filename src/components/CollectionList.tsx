@@ -1,4 +1,5 @@
-import { FolderOpen, ChevronRight } from 'lucide-react';
+import { FolderOpen, ChevronRight, Share2 } from 'lucide-react';
+import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import type { Collection } from '../types';
 
@@ -9,6 +10,21 @@ interface CollectionListProps {
 
 export function CollectionList({ collections, onSelect }: CollectionListProps) {
   const { t } = useLanguage();
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const copyToClipboard = async (url: string, id: string) => {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch {
+      // fallback
+    }
+  };
+
+  const getShareUrl = (path: string) => {
+    return window.location.origin + window.location.pathname + '#/' + path;
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -47,7 +63,20 @@ export function CollectionList({ collections, onSelect }: CollectionListProps) {
               </div>
             </div>
             
-            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors flex-shrink-0 ml-4" />
+            <div className="flex items-center gap-2 flex-shrink-0 ml-4">
+              <button
+                onClick={(e) => { e.stopPropagation(); copyToClipboard(getShareUrl(collection.url), `collection-${index}`); }}
+                className="flex items-center justify-center w-9 h-9 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors"
+                title={t({ en: 'Share collection link', zh: '分享合集链接' })}
+              >
+                {copiedId === `collection-${index}` ? (
+                  <span className="text-xs font-medium text-green-600 dark:text-green-400">OK</span>
+                ) : (
+                  <Share2 className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                )}
+              </button>
+              <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors flex-shrink-0" />
+            </div>
           </button>
         ))}
       </div>

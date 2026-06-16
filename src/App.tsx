@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { CollectionList } from './components/CollectionList';
 import { SeriesList } from './components/SeriesList';
 import { FitDetail } from './components/FitDetail';
+import FitGeneratorPage from './components/FitGeneratorPage';
 import { parseFitsDirectory } from './utils/xmlParser';
 import { loadSDEData, getItemByName } from './utils/sdeLoader';
 import type { MainData, Collection, Series } from './types';
@@ -274,6 +275,7 @@ function AppContent() {
         <div className="flex-1 overflow-auto">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/generator" element={<FitGeneratorPage />} />
             <Route path="/:collectionUrl" element={<SeriesPageRoute />} />
             <Route path="/:collectionUrl/:seriesUrl" element={<FitPageRoute />} />
             <Route path="/:collectionUrl/:seriesUrl/:configUrl" element={<FitPageRoute />} />

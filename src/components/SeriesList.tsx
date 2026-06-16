@@ -1,4 +1,5 @@
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Share2 } from 'lucide-react';
+import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { getItemByName, getItemIconUrlFromSDEItem } from '../utils/sdeLoader';
 import type { Collection, Series } from '../types';
@@ -11,6 +12,21 @@ interface SeriesListProps {
 
 export function SeriesList({ collection, onSelect, onBack }: SeriesListProps) {
   const { t } = useLanguage();
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const copyToClipboard = async (url: string, id: string) => {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch {
+      // fallback
+    }
+  };
+
+  const getShareUrl = (path: string) => {
+    return window.location.origin + window.location.pathname + '#/' + path;
+  };
 
   const getShipIcons = (series: Series) => {
     const icons: { name: string; iconUrl: string }[] = [];
@@ -68,7 +84,7 @@ export function SeriesList({ collection, onSelect, onBack }: SeriesListProps) {
                 </p>
               </div>
               
-              <div className="flex items-center gap-3 ml-4 flex-shrink-0">
+              <div className="flex items-center gap-2 ml-4 flex-shrink-0">
                 <div className="flex -space-x-2">
                   {shipIcons.map((icon, i) => (
                     <div
@@ -89,6 +105,17 @@ export function SeriesList({ collection, onSelect, onBack }: SeriesListProps) {
                     </div>
                   )}
                 </div>
+                <button
+                  onClick={(e) => { e.stopPropagation(); copyToClipboard(getShareUrl(`${collection.url}/${series.url}`), `series-${index}`); }}
+                  className="flex items-center justify-center w-9 h-9 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors"
+                  title={t({ en: 'Share series link', zh: '分享系列链接' })}
+                >
+                  {copiedId === `series-${index}` ? (
+                    <span className="text-xs font-medium text-green-600 dark:text-green-400">OK</span>
+                  ) : (
+                    <Share2 className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                  )}
+                </button>
                 <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors" />
               </div>
             </button>

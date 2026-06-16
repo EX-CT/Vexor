@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { AlertTriangle, Info, Copy, Share2, X, Camera } from 'lucide-react';
+import { AlertTriangle, Info, Copy, Share2, X, Camera, ChevronRight, ChevronLeft } from 'lucide-react';
 import domtoimage from 'dom-to-image-more';
 import { useLanguage } from '../context/LanguageContext';
 import { getItemByName, getItemIconUrlFromSDEItem } from '../utils/sdeLoader';
@@ -132,12 +132,16 @@ export function RightPanel({
   return (
     <>
     <aside className={`${collapsed ? 'w-12' : 'w-72'} bg-white dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700 overflow-hidden flex-shrink-0 transition-all duration-300 flex flex-col relative`}>
-      {/* 收回按钮 */}
+      {/* 收回/展开按钮 */}
       <button
         onClick={onToggleCollapse}
         className={`absolute top-2 ${collapsed ? 'right-0' : 'right-2'} p-2 bg-violet-100 dark:bg-violet-900/50 hover:bg-violet-200 dark:hover:bg-violet-900/70 border border-violet-200 dark:border-violet-800 rounded-lg flex items-center justify-center transition-all duration-300 shadow-sm z-10`}
       >
-        <Info className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+        {collapsed ? (
+          <ChevronLeft className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+        ) : (
+          <ChevronRight className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+        )}
       </button>
       
       <div className={`w-72 h-full p-4 overflow-y-auto ${collapsed ? 'invisible' : 'visible'}`}>

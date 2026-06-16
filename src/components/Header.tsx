@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Globe, ChevronRight, Sun, Moon, FileText, X, Heart, Code } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Globe, ChevronRight, Sun, Moon, FileText, X, Heart, Code, Wrench } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useDarkMode } from '../context/DarkModeContext';
 import type { LocaleText } from '../types';
@@ -20,6 +21,7 @@ const LEGAL_TEXT = `FENRIS Copyright Notice
 EVE Online and the EVE logo are the registered trademarks of FENRIS. All rights are reserved worldwide. All other trademarks are the property of their respective owners. EVE Online, the EVE logo, EVE and all associated logos and designs are the intellectual property of FENRIS. All artwork, screenshots, characters, vehicles, storylines, world facts or other recognizable features of the intellectual property relating to these trademarks are likewise the intellectual property of FENRIS.`;
 
 export function Header({ title, path, onHome }: HeaderProps) {
+  const navigate = useNavigate();
   const { lang, setLang, t } = useLanguage();
   const { isDark, toggleDark } = useDarkMode();
   const [showLegalModal, setShowLegalModal] = useState(false);
@@ -76,10 +78,17 @@ export function Header({ title, path, onHome }: HeaderProps) {
             </button>
             <button
               onClick={() => setShowLegalModal(true)}
-              className="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+              className="hidden md:flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
               title={lang === 'zh' ? '法律声明' : 'Legal Notice'}
             >
               <FileText className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => navigate('/generator')}
+              className="hidden md:flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+              title={lang === 'zh' ? '配置生成工具' : 'Fit Generator'}
+            >
+              <Wrench className="w-5 h-5" />
             </button>
             <button
               onClick={toggleDark}
@@ -88,9 +97,18 @@ export function Header({ title, path, onHome }: HeaderProps) {
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
+            {/* 手机端: 简洁语言切换 */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+              className="md:hidden flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+              title={lang === 'zh' ? 'Switch to English' : '切换到中文'}
+            >
+              {lang === 'zh' ? 'EN' : '中文'}
+            </button>
+            {/* 桌面端: 完整语言切换 */}
+            <button
+              onClick={toggleLang}
+              className="hidden md:flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
             >
               <Globe className="w-5 h-5" />
               <span>{lang === 'zh' ? 'EN' : '中文'}</span>

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { Menu, Info } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Sidebar } from './Sidebar';
 import { RightPanel } from './RightPanel';
@@ -50,11 +51,15 @@ export function FitDetail({
   }, []);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [rightPanelCollapsed, setRightPanelCollapsed] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [mobileRightPanelOpen, setMobileRightPanelOpen] = useState(false);
 
   // 初始化和监听窗口大小变化
   useEffect(() => {
     const checkMobile = () => {
       const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
       // 移动端左边栏默认收进，右边栏默认展开
       if (mobile) {
         setSidebarCollapsed(true);
@@ -156,13 +161,14 @@ export function FitDetail({
           allSeries={allSeries}
           collapsed={sidebarCollapsed}
           onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
+          onBack={onBack}
         />
         <main className="flex-1 p-8">
           <button
             onClick={onBack}
             className="flex items-center gap-2 text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-300 mb-6 transition-colors"
           >
-            <span>{t({ en: 'Back to Series', zh: '返回系列' })}</span>
+            <span>{t({ en: 'Back to Collection', zh: '返回合集' })}</span>
           </button>
           <p className="text-center text-gray-500 dark:text-gray-400">
             {t({ en: 'No fit data available', zh: '没有可用的配置数据' })}
@@ -233,22 +239,46 @@ export function FitDetail({
   return (
     <div className="min-h-full bg-gray-100 dark:bg-gray-900">
       <div className="flex min-h-full">
-        {/* 左侧边栏 */}
-        <Sidebar
-          series={series}
-          collectionName={collectionName}
-          selectedConfigIndex={selectedConfigIndex}
-          onConfigChange={handleConfigChange}
-          onSeriesChange={handleSeriesChange}
-          allSeries={allSeries}
-          collapsed={sidebarCollapsed}
-          onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
-        />
+        {/* 桌面端: 左侧边栏 (inline) */}
+        {!isMobile && (
+          <Sidebar
+            series={series}
+            collectionName={collectionName}
+            selectedConfigIndex={selectedConfigIndex}
+            onConfigChange={handleConfigChange}
+            onSeriesChange={handleSeriesChange}
+            allSeries={allSeries}
+            collapsed={sidebarCollapsed}
+            onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
+            onBack={onBack}
+          />
+        )}
 
         {/* 主内容区 */}
         <main className="flex-1 flex relative min-w-0">
           {/* 中间装备区域 - 两列 */}
           <div className="flex-1 p-4 bg-gray-100 dark:bg-gray-900 min-w-0">
+            {/* 移动端: 浮动按钮 */}
+            {isMobile && (
+              <div className="flex items-center gap-2 mb-3">
+                <button
+                  onClick={() => setMobileSidebarOpen(true)}
+                  className="p-2 bg-violet-100 dark:bg-violet-900/50 hover:bg-violet-200 dark:hover:bg-violet-900/70 rounded-lg transition-colors"
+                >
+                  <Menu className="w-5 h-5 text-violet-600 dark:text-violet-400" />
+                </button>
+                <button
+                  onClick={() => setMobileRightPanelOpen(true)}
+                  className="p-2 bg-violet-100 dark:bg-violet-900/50 hover:bg-violet-200 dark:hover:bg-violet-900/70 rounded-lg transition-colors"
+                >
+                  <Info className="w-5 h-5 text-violet-600 dark:text-violet-400" />
+                </button>
+                <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">
+                  {t(collectionName || { en: '', zh: '' })} / {t(series.name)}
+                </span>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 左列 */}
               <EquipmentColumn
@@ -271,25 +301,72 @@ export function FitDetail({
             </div>
           </div>
 
-          {/* 右侧信息栏 */}
-          <RightPanel
-            shipName={currentFit.shipName}
-            lang={lang}
-            collectionName={t(collectionName || { en: '', zh: '' })}
-            seriesName={t(series.name)}
-            currentConfig={currentConfig}
-            currentBranch={currentBranch}
-            selectedBranchIndex={selectedBranchIndex}
-            selectedFitIndex={selectedFitIndex}
-            onBranchChange={handleBranchChange}
-            onFitIndexChange={setSelectedFitIndex}
-            collapsed={rightPanelCollapsed}
-            onToggleCollapse={() => setRightPanelCollapsed(!rightPanelCollapsed)}
-            alternativeSelections={alternativeSelections}
-            onAlternativeChange={handleAlternativeChange}
-          />
+          {/* 桌面端: 右侧信息栏 (inline) */}
+          {!isMobile && (
+            <RightPanel
+              shipName={currentFit.shipName}
+              lang={lang}
+              collectionName={t(collectionName || { en: '', zh: '' })}
+              seriesName={t(series.name)}
+              currentConfig={currentConfig}
+              currentBranch={currentBranch}
+              selectedBranchIndex={selectedBranchIndex}
+              selectedFitIndex={selectedFitIndex}
+              onBranchChange={handleBranchChange}
+              onFitIndexChange={setSelectedFitIndex}
+              collapsed={rightPanelCollapsed}
+              onToggleCollapse={() => setRightPanelCollapsed(!rightPanelCollapsed)}
+              alternativeSelections={alternativeSelections}
+              onAlternativeChange={handleAlternativeChange}
+            />
+          )}
         </main>
       </div>
+
+      {/* 移动端: 侧边栏浮动覆盖 */}
+      {isMobile && mobileSidebarOpen && (
+        <div className="fixed inset-0 z-50">
+          <div className="absolute inset-0 bg-black/30" onClick={() => setMobileSidebarOpen(false)} />
+          <div className="absolute left-0 top-0 bottom-0 bg-gray-50 dark:bg-gray-800 shadow-xl overflow-hidden">
+            <Sidebar
+              series={series}
+              collectionName={collectionName}
+              selectedConfigIndex={selectedConfigIndex}
+              onConfigChange={(i) => { handleConfigChange(i); setMobileSidebarOpen(false); }}
+              onSeriesChange={(e) => { handleSeriesChange(e); }}
+              allSeries={allSeries}
+              collapsed={false}
+              onToggleCollapse={() => setMobileSidebarOpen(false)}
+              onBack={() => { setMobileSidebarOpen(false); onBack(); }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* 移动端: 右侧面板浮动覆盖 */}
+      {isMobile && mobileRightPanelOpen && (
+        <div className="fixed inset-0 z-50">
+          <div className="absolute inset-0 bg-black/30" onClick={() => setMobileRightPanelOpen(false)} />
+          <div className="absolute right-0 top-0 bottom-0 w-72 bg-white dark:bg-gray-800 shadow-xl overflow-y-auto">
+            <RightPanel
+              shipName={currentFit.shipName}
+              lang={lang}
+              collectionName={t(collectionName || { en: '', zh: '' })}
+              seriesName={t(series.name)}
+              currentConfig={currentConfig}
+              currentBranch={currentBranch}
+              selectedBranchIndex={selectedBranchIndex}
+              selectedFitIndex={selectedFitIndex}
+              onBranchChange={handleBranchChange}
+              onFitIndexChange={setSelectedFitIndex}
+              collapsed={false}
+              onToggleCollapse={() => setMobileRightPanelOpen(false)}
+              alternativeSelections={alternativeSelections}
+              onAlternativeChange={handleAlternativeChange}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
