@@ -39,7 +39,7 @@ export function Header({ title, path, onHome }: HeaderProps) {
               onClick={onHome}
             >
               <img 
-                src="/logo.png" 
+                src="./logo.png" 
                 alt="Logo" 
                 className="w-10 h-10 rounded-lg"
               />

@@ -76,6 +76,21 @@ export interface SDEItem {
     zh: string;
   };
   iconID?: number;
+  marketGroupID?: number;
+  metaGroupID?: number;
+  basePrice?: number;
+  graphicID?: number;
+  mass?: number;
+  capacity?: number;
+  metaLevel?: number;
+  portionSize?: number;
+  factionID?: number;
+  published?: boolean;
+  volume?: number;
+  radius?: number;
+  variationParentTypeID?: number;
+  raceID?: number;
+  soundID?: number;
   description?: {
     de: string;
     en: string;

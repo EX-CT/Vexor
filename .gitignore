@@ -4,3 +4,5 @@ dist/
 .env.local
 .DS_Store
 *.log
+src/data/fitsData.ts
+src/data/sdeData.ts

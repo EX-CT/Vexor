@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "npm run compile && vite",
+    "compile": "npm run compile-sde && npm run compile-fits",
+    "compile-sde": "node scripts/compile-sde.js",
+    "compile-fits": "node scripts/compile-fits.js",
+    "build": "npm run compile && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
