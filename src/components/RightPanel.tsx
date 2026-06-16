@@ -106,7 +106,6 @@ export function RightPanel({
       try {
         const imageData = await domtoimage.toPng(screenshotRef.current, {
           quality: 1,
-          backgroundColor: '#ffffff',
           cacheBust: true,
           scale: 2,
         });

@@ -176,6 +176,7 @@ export async function parseFitsDirectory(): Promise<MainData> {
   const mainData: MainData = {
     name: { en: '', zh: '' },
     collections: [],
+    footer: { en: '', zh: '' },
   };
 
   try {

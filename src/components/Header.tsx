@@ -29,10 +29,6 @@ export function Header({ title, path, onHome }: HeaderProps) {
     setLang(lang === 'zh' ? 'en' : 'zh');
   };
 
-  const handleCopyGithub = async () => {
-    await navigator.clipboard.writeText('https://github.com/EX-CT/Vexor');
-  };
-
   return (
     <>
       <header className="bg-gradient-to-r from-purple-900 via-violet-800 to-purple-900 text-white shadow-lg">
