@@ -7,7 +7,7 @@ import { SeriesList } from './components/SeriesList';
 import { FitDetail } from './components/FitDetail';
 import FitGeneratorPage from './components/FitGeneratorPage';
 import { parseFitsDirectory } from './utils/xmlParser';
-import { loadSDEData, getItemByName } from './utils/sdeLoader';
+import { loadSDEData } from './utils/sdeLoader';
 import type { MainData, Collection, Series } from './types';
 import { useState, useEffect, createContext, useContext } from 'react';
 
@@ -33,35 +33,32 @@ function HeaderWrapper() {
   const { t } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
-  const { selectedCollection, selectedSeries, selectedConfigIndex, selectedBranchIndex } = useAppContext();
+  const { data } = useAppContext();
 
   const pathSegments: { label: string; active?: boolean }[] = [];
-
   const pathParts = location.pathname.split('/').filter(p => p);
-  
-  if (pathParts.length === 1) {
-    if (selectedCollection) {
-      pathSegments.push({ label: t(selectedCollection.name), active: true });
-    }
-  } else if (pathParts.length >= 2) {
-    if (selectedCollection) {
-      pathSegments.push({ label: t(selectedCollection.name) });
-    }
-    if (selectedSeries) {
-      pathSegments.push({ label: t(selectedSeries.name) });
 
-      const config = selectedSeries.configs[selectedConfigIndex];
-      if (config) {
-        pathSegments.push({ label: t(config.name), active: true });
+  if (pathParts.length >= 1 && data) {
+    const collectionUrl = pathParts[0];
+    const collection = data.collections.find(c => c.url === collectionUrl);
+    if (collection) {
+      pathSegments.push({ label: t(collection.name) });
 
-        const branch = config.branches[selectedBranchIndex];
-        const fit = branch?.fits[0];
-        if (fit) {
-          const sdeItem = getItemByName(fit.shipName);
-          pathSegments.push({ 
-            label: sdeItem ? t({ en: sdeItem.name.en, zh: sdeItem.name.zh || sdeItem.name.en }) : fit.shipName 
-          });
-          pathSegments.push({ label: t(branch.name) });
+      if (pathParts.length >= 2) {
+        const seriesUrl = pathParts[1];
+        const series = collection.series.find(s => s.url === seriesUrl);
+        if (series) {
+          pathSegments.push({ label: t(series.name) });
+
+          if (pathParts.length >= 3) {
+            const configUrl = pathParts[2];
+            const config = series.configs.find(c => c.url === configUrl);
+            if (config) {
+              pathSegments.push({ label: t(config.name), active: true });
+            } else if (series.configs.length > 0) {
+              pathSegments.push({ label: t(series.configs[0].name), active: true });
+            }
+          }
         }
       }
     }
