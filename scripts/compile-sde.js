@@ -53,20 +53,28 @@ function extractItemNames(xmlContent) {
         itemName = itemName.slice(0, -1).trim();
       }
 
-      // 移除替代项
-      itemName = itemName.split('==')[0].trim();
-
-      // 移除弹药
-      itemName = itemName.split(',')[0].trim();
-
-      // 移除数量
-      const match = itemName.match(/^(.+?)\s+x\d+$/i);
-      if (match) {
-        itemName = match[1].trim();
-      }
-
-      if (itemName) {
-        itemNames.add(itemName);
+      // 提取所有 == 分割的名称（包括替代项）
+      const altParts = itemName.split('==');
+      for (const part of altParts) {
+        let name = part.trim();
+        // 提取弹药/脚本名（逗号后面的部分）
+        const commaParts = name.split(',');
+        const mainItem = commaParts[0].trim();
+        // 添加弹药/脚本名到集合
+        if (commaParts.length > 1) {
+          const ammoName = commaParts.slice(1).join(',').trim();
+          if (ammoName) {
+            // 弹药也可能有数量 x数字
+            const ammoMatch = ammoName.match(/^(.+?)\s+x\d+$/i);
+            itemNames.add(ammoMatch ? ammoMatch[1].trim() : ammoName);
+          }
+        }
+        // 移除数量
+        const match = mainItem.match(/^(.+?)\s+x\d+$/i);
+        const itemNameToAdd = match ? match[1].trim() : mainItem;
+        if (itemNameToAdd) {
+          itemNames.add(itemNameToAdd);
+        }
       }
     }
   }

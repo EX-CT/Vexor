@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>mining</url>
+
+<name lang="en">Mining</name>
+<name lang="zh">挖矿</name>
+
+<description lang="en">Mining fits</description>
+<description lang="zh">挖矿配置</description>
+</root>

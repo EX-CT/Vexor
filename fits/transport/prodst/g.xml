@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>gdst</url>
+
+  <name lang="en">Gallent DST</name>
+  <name lang="zh">G族专业强运</name>
+
+  <description lang="en">Certified hardened transport fit</description>
+  <description lang="zh">认证强运配置</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <alert lang="en">Requires cloak trick</alert>
+    <alert lang="zh">请假隐跳</alert>
+
+    <fit version="1">
+      [Occator]
+      [low]
+      Core X-Type Kinetic Armor Hardener
+      Core X-Type Thermal Armor Hardener
+      Syndicate 800mm Steel Plates
+      Corpii A-Type Multispectrum Coating
+      Core X-Type EM Armor Hardener
+      Core X-Type Explosive Armor Hardener
+      [med]
+      50MN Quad LiF Restrained Microwarpdrive
+      Small Capacitor Booster II
+      Small Capacitor Booster II
+      [high]
+      Caldari Navy Cloaking Device
+      [rig]
+      Medium Trimark Armor Pump II
+      Medium Trimark Armor Pump II
+    </fit>
+  </branch>
+</root>

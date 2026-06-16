@@ -105,12 +105,13 @@ export function FitDetail({
       const configIndex = series.configs.indexOf(initialConfig);
       setSelectedConfigIndex(configIndex >= 0 ? configIndex : 0);
     } else {
-      setSelectedConfigIndex(0);
+      // 保持外部传入的索引，不从 0 开始
+      setSelectedConfigIndex(externalConfigIndex >= 0 ? externalConfigIndex : 0);
     }
     setSelectedBranchIndex(0);
     setAlternativeSelections({});
     
-    const currentConfig = series.configs[initialConfig ? series.configs.indexOf(initialConfig) : 0];
+    const currentConfig = series.configs[initialConfig ? series.configs.indexOf(initialConfig) : (externalConfigIndex >= 0 ? externalConfigIndex : 0)];
     const currentBranch = currentConfig?.branches[0];
     const fitsLength = currentBranch?.fits?.length || 1;
     setSelectedFitIndex(fitsLength - 1);

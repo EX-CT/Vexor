@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>caracal</url>
+
+  <name lang="en">Bloody Caracal</name>
+  <name lang="zh">血染狞獾</name>
+
+  <description lang="en">Missile-oriented fit with enough staying power to clear all</description>
+  <description lang="zh">导弹方向配置，可全打完</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Caracal]
+      [low]
+      Ballistic Control System I
+      Ballistic Control System I
+      Ballistic Control System I
+      Type-D Restrained Inertial Stabilizers
+      [med]
+      Small Azeotropic Restrained Shield Extender
+      Small Azeotropic Restrained Shield Extender
+      Missile Guidance Computer I , Missile Precision Script
+      Enduring Multispectrum Shield Hardener
+      10MN Monopropellant Enduring Afterburner
+      [high]
+      Prototype 'Arbalest' Rapid Light Missile Launcher
+      Prototype 'Arbalest' Rapid Light Missile Launcher
+      Prototype 'Arbalest' Rapid Light Missile Launcher
+      Prototype 'Arbalest' Rapid Light Missile Launcher
+      Prototype 'Arbalest' Rapid Light Missile Launcher
+      [rig]
+      Medium Polycarbon Engine Housing I
+      Medium EM Shield Reinforcer I
+      Medium Core Defense Field Extender I
+      [cargo]
+      Type-D Restrained Inertial Stabilizers x3
+      Caldari Navy Nova Light Missile x1000
+      Legion Scourge Auto-Targeting Light Missile x2000
+    </fit>
+  </branch>
+</root>

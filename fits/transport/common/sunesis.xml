@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>sunesis</url>
+
+  <name lang="en">Cargo Sunesis</name>
+  <name lang="zh">运货旭日</name>
+
+  <description lang="en">700+ m³ cargo capacity with excellent speed</description>
+  <description lang="zh">可容纳700方以上，且速度优秀</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Sunesis]
+      [low]
+      Inertial Stabilizers II
+      Inertial Stabilizers II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      [med]
+      5MN Quad LiF Restrained Microwarpdrive
+      Small Azeotropic Restrained Shield Extender
+      Medium Shield Extender I
+      Medium Shield Extender I
+      [rig]
+      Small Hyperspatial Velocity Optimizer II == Small Cargohold Optimization II
+      Small Hyperspatial Velocity Optimizer II == Small Cargohold Optimization II
+      Small Hyperspatial Velocity Optimizer II == Small Cargohold Optimization I
+      [cargo]
+      Expanded Cargohold II x2
+    </fit>
+  </branch>
+</root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>tornado</url>
+
+  <name lang="en">Tornado for Scarlet</name>
+  <name lang="zh">斯嘉丽龙卷风</name>
+
+  <description lang="en">For Scarlet pirates: burn to the orbit, lock and fire right after warp, shoot twice</description>
+  <description lang="zh">打斯嘉丽海盗专用，冲轨道，跃迁结束锁定开火，打两次</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Tornado]
+      [low]
+      Republic Fleet Gyrostabilizer
+      Gyrostabilizer II
+      Gyrostabilizer II
+      Reactor Control Unit II
+      [med]
+      50MN Y-T8 Compact Microwarpdrive
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Large F-S9 Regolith Compact Shield Extender
+      Medium Shield Extender II
+      [high]
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      1400mm 'Scout' Artillery I
+      [rig]
+      Medium Ancillary Current Router I
+      Medium Projectile Collision Accelerator II
+      [cargo]
+      Republic Fleet EMP L x4000
+    </fit>
+  </branch>
+</root>

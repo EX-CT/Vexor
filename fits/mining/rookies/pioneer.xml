@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>pioneer</url>
+
+  <name lang="en">Rookie Pioneer</name>
+  <name lang="zh">新人挖矿开拓</name>
+
+  <description lang="en">Beginner mining</description>
+  <description lang="zh">新人挖矿</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Pioneer]
+      [low]
+      Mining Laser Upgrade II == Mining Laser Upgrade I
+      Mining Laser Upgrade II == Mining Laser Upgrade I
+      [med]
+      5MN Y-T8 Compact Microwarpdrive
+      Small F-S9 Regolith Compact Shield Extender
+      Eutectic Compact Cap Recharger
+      [high]
+      Miner II
+      Miner II
+      Miner II
+      [rig]
+      Small Hyperspatial Velocity Optimizer I
+      Small Hyperspatial Velocity Optimizer I
+      Small Processor Overclocking Unit II
+      [drone]
+      Hornet I x4
+      Mining Drone I x4
+      [cargo]
+      Gas Cloud Scoop I x1
+    </fit>
+  </branch>
+</root>

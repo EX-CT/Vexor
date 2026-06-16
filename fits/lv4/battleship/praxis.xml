@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>praxis</url>
+
+  <name lang="en">Rookie Lv4 Praxis</name>
+  <name lang="zh">新人四级实践</name>
+
+  <description lang="en">Rookie Lv4 Praxis fits</description>
+  <description lang="zh">新人极低技能的巡航导弹实践方案</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Praxis]
+      [low]
+      IFFA Compact Damage Control == Damage Control II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      F-89 Compact Signal Amplifier
+      F-89 Compact Signal Amplifier
+      [med]
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Large F-S9 Regolith Compact Shield Extender
+      Large F-S9 Regolith Compact Shield Extender
+      Large F-S9 Regolith Compact Shield Extender
+      Large Micro Jump Drive
+      [high]
+      'Arbalest' Cruise Launcher I
+      'Arbalest' Cruise Launcher I
+      'Arbalest' Cruise Launcher I
+      'Arbalest' Cruise Launcher I
+      'Arbalest' Cruise Launcher I
+      'Arbalest' Cruise Launcher I
+      [rig]
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      [cargo]
+      Mjolnir Cruise Missile x3000 == Caldari Navy Mjolnir Cruise Missile x3000
+      Scourge Cruise Missile x3000 == Caldari Navy Scourge Cruise Missile x3000
+      Inferno Cruise Missile x3000 == Caldari Navy Inferno Cruise Missile x3000
+      Nova Cruise Missile x3000 == Caldari Navy Nova Cruise Missile x3000
+      Mobile Tractor Unit x1
+      [drone]
+      Praetor I x5
+      Acolyte I x20
+    </fit>
+  </branch>
+</root>

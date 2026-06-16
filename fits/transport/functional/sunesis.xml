@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>sneaky-sunesis</url>
+
+  <name lang="en">Sneaky Sunesis</name>
+  <name lang="zh">偷鸡摸狗旭日</name>
+
+  <description lang="en">For sneaky wreck looting</description>
+  <description lang="zh">用于偷残骸</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Sunesis]
+      [low]
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Type-D Restrained Inertial Stabilizers
+      Type-D Restrained Inertial Stabilizers
+      [med]
+      F-90 Compact Sensor Booster , Scan Resolution Script
+      F-90 Compact Sensor Booster , Scan Resolution Script
+      Medium Azeotropic Restrained Shield Extender
+      Medium Azeotropic Restrained Shield Extender
+      [high]
+      Prototype Cloaking Device I
+      Arbalest Compact Light Missile Launcher , Mjolnir Light Missile x40
+      Arbalest Compact Light Missile Launcher , Mjolnir Light Missile x40
+      Arbalest Compact Light Missile Launcher , Mjolnir Light Missile x40
+      [rig]
+      Small Low Friction Nozzle Joints II
+      Small Cargohold Optimization II
+      Small Cargohold Optimization II
+      [drone]
+      Hornet I x4
+    </fit>
+  </branch>
+</root>

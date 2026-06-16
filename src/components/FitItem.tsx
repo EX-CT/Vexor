@@ -22,11 +22,24 @@ export function FitItem({
   const { t, lang } = useLanguage();
   const selectionKey = `${sectionKey}-${index}`;
   const altIndex = alternativeSelections[selectionKey] ?? -1;
+
+  // Parse alternative name+quantity if selected
+  const getAltNameOnly = (alt: string) => {
+    const match = alt.match(/^(.+?)\s+x\d+$/i);
+    return match ? match[1].trim() : alt;
+  };
+  const getAltQuantity = (alt: string): number | undefined => {
+    const match = alt.match(/^.+\s+x(\d+)$/i);
+    return match ? parseInt(match[1], 10) : undefined;
+  };
   
   const displayName = altIndex >= 0 && item.alternatives?.[altIndex] 
-    ? item.alternatives[altIndex] 
+    ? getAltNameOnly(item.alternatives[altIndex])
     : item.name;
-  
+  const displayQuantity = altIndex >= 0 && item.alternatives?.[altIndex]
+    ? getAltQuantity(item.alternatives[altIndex]) ?? item.quantity
+    : item.quantity;
+
   const sdeItem = getItemByName(displayName);
   const iconUrl = sdeItem ? getItemIconUrlFromSDEItem(sdeItem, 64) : null;
   
@@ -42,11 +55,12 @@ export function FitItem({
     : item.ammo;
 
   const getAltName = (altName: string) => {
-    const altSdeItem = getItemByName(altName);
+    const cleanName = getAltNameOnly(altName);
+    const altSdeItem = getItemByName(cleanName);
     if (altSdeItem) {
       return lang === 'zh' ? (altSdeItem.name.zh || altSdeItem.name.en) : altSdeItem.name.en;
     }
-    return altName;
+    return cleanName;
   };
 
   return (
@@ -67,8 +81,8 @@ export function FitItem({
             <span className="text-base font-bold text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 px-1.5 py-0.5 rounded">{mergedCount}x</span>
           )}
           <span className="text-sm text-gray-800 dark:text-gray-100 truncate">{equipmentName}</span>
-          {item.quantity && (
-            <span className="text-base font-bold text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 px-1.5 py-0.5 rounded">x{item.quantity}</span>
+          {displayQuantity && (
+            <span className="text-base font-bold text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 px-1.5 py-0.5 rounded">x{displayQuantity}</span>
           )}
           {item.offline && (
             <span className="text-xs text-gray-400 dark:text-gray-500">{t({ en: '(offline)', zh: '(离线)' })}</span>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>paladin</url>
+
+  <name lang="en">Lv4 Paladin</name>
+  <name lang="zh">四级帕拉丁</name>
+
+  <description lang="en">Lv4 Paladin fits</description>
+  <description lang="zh">四级帕拉丁配置</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+    <alert lang="en">Ganking Warning!</alert>
+    <alert lang="zh">注意防强暴！</alert>
+
+    <fit version="1">
+      [Paladin]
+      [low]
+      Dark Blood Large Armor Repairer
+      Heat Sink II
+      Heat Sink II
+      Heat Sink II
+      Imperial Navy Multispectrum Energized Membrane
+      Imperial Navy Multispectrum Energized Membrane
+      Capacitor Power Relay II
+      [med]
+      Tracking Computer II
+      Tracking Computer II
+      Large Micro Jump Drive
+      Republic Fleet Large Cap Battery
+      [high]
+      Bastion Module I
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Small Tractor Beam II
+      Small Tractor Beam II
+      Small Tractor Beam II
+      [rig]
+      Large Capacitor Control Circuit II
+      Large Capacitor Control Circuit II
+      [cargo]
+      Conflagration L x40
+      Scorch L x40
+      Imperial Navy Radio L x20
+      Optimal Range Script x2
+      Tracking Speed Script x2
+      [drone]
+      Acolyte II x5
+      Hobgoblin II x5
+      Warrior II x5
+    </fit>
+  </branch>
+</root>

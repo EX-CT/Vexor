@@ -5,126 +5,55 @@
 <name lang="en">Logi Nestor</name>
 <name lang="zh">后勤大白</name>
 
-<description lang="en">Standard logistics configuration for Incursion fleet. Provides reliable remote repping and capacitor support.</description>
-<description lang="zh">侵舰队标准后勤配置。提供可靠的远程维修和电容支持。</description>
+<description lang="en">Elite Logi Nestor</description>
+<description lang="zh">精装后勤大白</description>
 
 <branch>
 <bname lang="en">Main</bname>
 <bname lang="zh">主线</bname>
 
-<alert lang="en">3 repair on!</alert>
-<alert lang="zh">要求3摇修永动！</alert>
+<alert lang="en">Needs to be cap stable with 5 reps running + MWD on</alert>
+<alert lang="zh">要求5摇修+微曲永动！</alert>
 
 <fit version="1">
-[Nestor]
-[low]
-Damage Control II
-True Sansha Multispectrum Energized Membrane
-True Sansha Multispectrum Energized Membrane
-Core B-Type Large Armor Repairer
-Core B-Type Large Armor Repairer
-1600mm Steel Plates II
-[med]
-Republic Fleet Large Cap Battery
-Republic Fleet Large Cap Battery
-Cap Recharger II == Republic Fleet Large Cap Battery
-Cap Recharger II
-Cap Recharger II
-Shadow Serpentis Sensor Booster
-[high]
-Large Remote Armor Repairer II
-Large Remote Armor Repairer II
-Large Remote Armor Repairer II
-Large Remote Armor Repairer II
-Large Remote Armor Repairer II
-Large Remote Capacitor Transmitter II
-Auto Targeting System II
-[rig]
-Large Remote Repair Augmentor II
-Large Remote Repair Augmentor II
-Large Hyperspatial Velocity Optimizer II
-[drone]
-Federation Navy Garde x5
-Heavy Shield Maintenance Bot I x5
-Heavy Hull Maintenance Bot I x5
-Heavy Armor Maintenance Bot I x5
-[cargo]
-Nanite Repair Paste x500
-</fit>
-<fit version="2">
-[Nestor]
-[low]
-Damage Control II
-True Sansha Multispectrum Energized Membrane
-True Sansha Multispectrum Energized Membrane
-Core B-Type Large Armor Repairer
-Core B-Type Large Armor Repairer
-1600mm Steel Plates II
-[med]
-Republic Fleet Large Cap Battery
-Republic Fleet Large Cap Battery
-Cap Recharger II == Republic Fleet Large Cap Battery
-Cap Recharger II
-Cap Recharger II
-Shadow Serpentis Sensor Booster
-Shadow Serpentis Sensor Booster == Republic Fleet Large Cap Battery
-[high]
-Large Remote Armor Repairer II
-Large Remote Armor Repairer II
+      [Nestor]
+      [high]
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      'Peace' Large Remote Armor Repairer
+      [med]
+      Imperial Navy Cap Recharger
+      Imperial Navy Cap Recharger
+      Core X-Type 500MN Microwarpdrive
+      Sentient Sensor Booster
+      Republic Fleet Large Cap Battery
+      Republic Fleet Large Cap Battery
+      [low]
+      Imperial Navy Capacitor Power Relay
+      Imperial Navy Capacitor Power Relay
+      Centum A-Type Multispectrum Energized Membrane
+      Centum A-Type Multispectrum Energized Membrane
+      Imperial Navy 1600mm Steel Plates
+      Syndicate Damage Control
+      [rig]
+      Large Remote Repair Augmentor II
+      Large Remote Repair Augmentor II
+      Large Hyperspatial Velocity Optimizer II
+      [drone]
+      Heavy Armor Maintenance Bot II x5
+      Heavy Shield Maintenance Bot II x5
+      'Augmented' Ogre x5
+      Heavy Hull Maintenance Bot II x5
+      [cargo]
+      Nanite Repair Paste x500
+      Scan Resolution Script x1
+      Imperial Navy 1600mm Steel Plates x1
+      ECCM Script x1
 </fit>
 </branch>
 
-<branch>
-<bname lang="en">Elite</bname>
-<bname lang="zh">精英</bname>
-
-<note lang="en">Expensive</note>
-<note lang="zh">更贵的精英版本</note>
-
-<fit version="1">
-[Nestor]
-[low]
-Centus X-Type Large Armor Repairer
-Centus X-Type Large Armor Repairer
-Centum A-Type Multispectrum Energized Membrane
-Centum A-Type Multispectrum Energized Membrane
-Imperial Navy 1600mm Steel Plates
-Syndicate Damage Control
-[med]
-Imperial Navy Cap Recharger
-Imperial Navy Cap Recharger
-Sentient Sensor Booster
-Republic Fleet Large Cap Battery
-Republic Fleet Large Cap Battery
-Republic Fleet Large Cap Battery
-[high]
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-Imperial Navy Large Remote Capacitor Transmitter
-Auto Targeting System II
-[rig]
-Large Remote Repair Augmentor II
-Large Remote Repair Augmentor II
-Large Hyperspatial Velocity Optimizer II
-[sub]
-Large Remote Repair Augmentor II
-[drone]
-'Augmented' Ogre x5
-Heavy Shield Maintenance Bot II x5
-Heavy Hull Maintenance Bot II x5
-Heavy Armor Maintenance Bot II x5
-[cargo]
-Nanite Repair Paste x500
-ECCM Script x1
-Scan Resolution Script x1
-Imperial Navy 1600mm Steel Plates x1
-[imp]
-Ocular Filter - Standard == Ocular Filter - Basic
-Neural Boost - Standard
-</fit>
-
-</branch>
 </root>

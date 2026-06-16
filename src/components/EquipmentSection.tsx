@@ -26,7 +26,7 @@ export function EquipmentSection({
   
   if (!items || items.length === 0) return null;
 
-  const shouldMerge = ['high', 'med', 'low', 'rig'].includes(keyName);
+  const shouldMerge = ['high', 'med', 'low', 'rig', 'sub'].includes(keyName);
   let displayItems: Array<{ item: FitItem; count: number; originalIndex: number }> = [];
 
   if (shouldMerge) {

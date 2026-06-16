@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>vexor</url>
+
+  <name lang="en">Bloody Vexor</name>
+  <name lang="zh">血染狂怒</name>
+
+  <description lang="en">Drone-oriented fit with enough staying power to clear all</description>
+  <description lang="zh">无人机方向配置，可全打完</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Vexor]
+      [low]
+      Type-D Restrained Capacitor Flux Coil
+      Type-D Restrained Capacitor Flux Coil
+      Type-D Restrained Capacitor Flux Coil
+      AE-K Compact Drone Damage Amplifier
+      AE-K Compact Drone Damage Amplifier
+      [med]
+      Large Compact Pb-Acid Cap Battery
+      Enduring Multispectrum Shield Hardener
+      10MN Monopropellant Enduring Afterburner
+      Large Clarity Ward Enduring Shield Booster
+      [high]
+      Drone Link Augmentor I
+      [rig]
+      Medium Thermal Shield Reinforcer I
+      Medium Thermal Shield Reinforcer I
+      Medium Capacitor Control Circuit I
+      [drone]
+      Wasp I x3
+      Hornet I x2
+      Vespa I x4
+    </fit>
+  </branch>
+</root>

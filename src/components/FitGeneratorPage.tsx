@@ -82,17 +82,16 @@ export default function FitGeneratorPage() {
       }
     } else {
       // Unlabeled EFT format: sections separated by blank lines
-      // Order: low -> med -> high -> rig -> sub -> drone -> imp -> cargo
-      const sectionOrder = ['low', 'med', 'high', 'rig', 'sub', 'drone', 'imp', 'cargo'];
-      let blockIndex = 0;
-      let currentBlock: string[] = [];
+      // Order: low -> med -> high -> rig -> drone, then remaining: imp (if 2+) then cargo, or all cargo
+      const fixedOrder = ['low', 'med', 'high', 'rig', 'drone'];
+       let currentBlock: string[] = [];
+      const blocks: string[][] = [];
 
+      // Collect all blocks first
       for (let i = lineIdx + 1; i < trimmedLines.length; i++) {
         if (trimmedLines[i] === '') {
-          // Empty line means end of current block
-          if (currentBlock.length > 0 && blockIndex < sectionOrder.length) {
-            sections[sectionOrder[blockIndex]] = currentBlock;
-            blockIndex++;
+          if (currentBlock.length > 0) {
+            blocks.push(currentBlock);
             currentBlock = [];
           }
           continue;
@@ -102,9 +101,26 @@ export default function FitGeneratorPage() {
           currentBlock.push(line);
         }
       }
-      // Last block
-      if (currentBlock.length > 0 && blockIndex < sectionOrder.length) {
-        sections[sectionOrder[blockIndex]] = currentBlock;
+      if (currentBlock.length > 0) {
+        blocks.push(currentBlock);
+      }
+
+      // Assign blocks to sections
+      for (let bi = 0; bi < blocks.length; bi++) {
+        if (bi < fixedOrder.length) {
+          sections[fixedOrder[bi]] = blocks[bi];
+        } else {
+          // Remaining blocks after drone
+          const remainingCount = blocks.length - fixedOrder.length;
+          if (remainingCount >= 2 && bi === fixedOrder.length) {
+            // First remaining block → imp
+            sections['imp'] = blocks[bi];
+          } else {
+            // All remaining blocks (including single remaining) → cargo
+            if (!sections['cargo']) sections['cargo'] = [];
+            sections['cargo'] = sections['cargo'].concat(blocks[bi]);
+          }
+        }
       }
     }
 
@@ -159,7 +175,7 @@ export default function FitGeneratorPage() {
         if (parsed) {
           const { shipName, sections } = parsed;
           xml += `      [${shipName}]\n`;
-          const sectionOrder = ['low', 'med', 'high', 'rig', 'drone', 'cargo', 'imp', 'sub'];
+          const sectionOrder = ['low', 'med', 'high', 'rig', 'drone', 'imp', 'cargo'];
           for (const section of sectionOrder) {
             if (sections[section] && sections[section].length > 0) {
               xml += `      [${section}]\n`;

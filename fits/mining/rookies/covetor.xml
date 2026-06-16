@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>covetor</url>
+
+  <name lang="en">Rookie Covetor</name>
+  <name lang="zh">新人挖矿妄想</name>
+
+  <description lang="en">Beginner mining</description>
+  <description lang="zh">新人挖矿</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Covetor]
+      [low]
+      Mining Laser Upgrade II == Mining Laser Upgrade I
+      Mining Laser Upgrade II == Mining Laser Upgrade I
+      Mining Laser Upgrade II == Mining Laser Upgrade I
+      [med]
+      10MN Y-S8 Compact Afterburner
+      ML-3 Compact Mining Survey Chipset
+      [high]
+      Strip Miner I
+      Strip Miner I
+      [rig]
+      Medium Processor Overclocking Unit I
+      Medium Hyperspatial Velocity Optimizer I
+      Medium Hyperspatial Velocity Optimizer I
+      [drone]
+      Hornet I x5
+      Mining Drone I x5
+      [cargo]
+      Ice Harvester I x2
+      Ice Harvester Upgrade I x3
+      Gas Cloud Harvester I x2
+    </fit>
+  </branch>
+</root>

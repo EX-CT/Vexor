@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>paladin</url>
+
+<name lang="en">DPS Paladin</name>
+<name lang="zh">火力帕拉丁</name>
+
+<description lang="en">Elite Logi Nestor</description>
+<description lang="zh">精装后勤大白</description>
+
+<branch>
+<bname lang="en">Main</bname>
+<bname lang="zh">主线</bname>
+
+<alert lang="en">1675 DPS with modules off</alert>
+<alert lang="zh">关模块DPS1675</alert>
+
+<fit version="1">
+      [Paladin]
+      [high]
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Small Tractor Beam I
+      Large Remote Armor Repairer II
+      Imperial Navy Large Remote Capacitor Transmitter
+      Bastion Module I
+      [med]
+      Large Micro Jump Drive
+      Federation Navy Tracking Computer
+      Federation Navy Tracking Computer
+      Gist X-Type 500MN Microwarpdrive
+      [low]
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Centum A-Type Multispectrum Energized Membrane
+      Centum A-Type Multispectrum Energized Membrane
+      Imperial Navy 1600mm Steel Plates
+      [rig]
+      Large Trimark Armor Pump II
+      Large Energy Burst Aerator II
+      [cargo]
+      Damage Control II x1
+      Conflagration L x40
+      Scorch L x40
+      Optimal Range Script x2
+      Tracking Speed Script x2
+      Imperial Navy 1600mm Steel Plates x1
+      [imp]
+      High-grade Ascendancy Alpha
+      High-grade Ascendancy Beta
+      High-grade Ascendancy Gamma
+      High-grade Ascendancy Delta
+      High-grade Ascendancy Epsilon
+      Eifyr and Co. 'Rogue' Warp Drive Speed WS-618 == High-grade Ascendancy Omega
+      Ogdin's Eye Coordination Enhancer
+      Inherent Implants 'Squire' Capacitor Management EM-806
+      Inherent Implants 'Lancer' Gunnery RF-906 == Pashan's Turret Customization Mindlink == Eifyr and Co. 'Gunslinger' Surgical Strike SS-906
+      Inherent Implants 'Lancer' Large Energy Turret LE-1006 == Pashan's Turret Handling Mindlink
+</fit>
+</branch>
+
+<branch>
+<bname lang="en">Navy Bastion</bname>
+<bname lang="zh">海军模块</bname>
+
+<alert lang="en">1675 DPS with modules off</alert>
+<alert lang="zh">关模块DPS1675</alert>
+
+<fit version="1">
+      [Paladin]
+      [high]
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Mega Pulse Laser II
+      Small Tractor Beam I
+      Large Remote Armor Repairer II
+      Imperial Navy Large Remote Capacitor Transmitter
+      Federation Navy Bastion Module
+      [med]
+      Large Micro Jump Drive
+      Federation Navy Tracking Computer
+      Federation Navy Tracking Computer
+      Gist X-Type 500MN Microwarpdrive
+      [low]
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Imperial Navy Heat Sink
+      Centum A-Type Multispectrum Energized Membrane
+      Centum A-Type Multispectrum Energized Membrane
+      Imperial Navy 1600mm Steel Plates
+      [rig]
+      Large Energy Locus Coordinator I
+      Large Energy Burst Aerator II
+      [cargo]
+      Damage Control II x1
+      Conflagration L x40
+      Scorch L x40
+      Optimal Range Script x2
+      Tracking Speed Script x2
+      Imperial Navy 1600mm Steel Plates x1
+      [imp]
+      High-grade Ascendancy Alpha
+      High-grade Ascendancy Beta
+      High-grade Ascendancy Gamma
+      High-grade Ascendancy Delta
+      High-grade Ascendancy Epsilon
+      Eifyr and Co. 'Rogue' Warp Drive Speed WS-618 == High-grade Ascendancy Omega
+      Ogdin's Eye Coordination Enhancer
+      Inherent Implants 'Squire' Capacitor Management EM-806
+      Inherent Implants 'Lancer' Gunnery RF-906 == Pashan's Turret Customization Mindlink == Eifyr and Co. 'Gunslinger' Surgical Strike SS-906
+      Inherent Implants 'Lancer' Large Energy Turret LE-1006 == Pashan's Turret Handling Mindlink
+</fit>
+</branch>
+
+</root>

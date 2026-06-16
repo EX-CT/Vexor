@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>golem</url>
+
+  <name lang="en">Lv4 Golem</name>
+  <name lang="zh">四级魔像</name>
+
+  <description lang="en">Lv4 Golem fits</description>
+  <description lang="zh">四级魔像轻松刷配置</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+    <alert lang="en">Ganking Warning!</alert>
+    <alert lang="zh">注意防强暴！</alert>
+
+    <fit version="1">
+      [Golem]
+      [low]
+      Capacitor Flux Coil II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      [med]
+      Republic Fleet Large Cap Battery
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Pith X-Type Large Shield Booster
+      Pith X-Type Shield Boost Amplifier
+      Missile Guidance Computer II , Missile Precision Script
+      Large Micro Jump Drive
+      [high]
+      Bastion Module I
+      Small Tractor Beam II
+      Auto Targeting System II
+      Drone Link Augmentor II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      [rig]
+      Large Semiconductor Memory Cell II == Large Capacitor Control Circuit II
+      Large Semiconductor Memory Cell II == Large Capacitor Control Circuit II
+      [drone]
+      Acolyte II x5
+      Hobgoblin II x5
+      Warrior II x5
+    </fit>
+  </branch>
+  <branch>
+    <bname lang="en">XLarge</bname>
+    <bname lang="zh">廉价超大回</bname>
+    
+    <alert lang="en">Ganking Warning!</alert>
+    <alert lang="zh">注意防强暴！</alert>
+
+    <fit version="1">
+      [Golem]
+      [low]
+      Capacitor Flux Coil II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      [med]
+      Republic Fleet Large Cap Battery
+      Cap Recharger II
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      X-Large Clarity Ward Enduring Shield Booster
+      Missile Guidance Computer II , Missile Precision Script
+      Large Micro Jump Drive
+      [high]
+      Bastion Module I
+      Small Tractor Beam II
+      Auto Targeting System II
+      Drone Link Augmentor II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      [rig]
+      Large Capacitor Control Circuit II
+      Large Capacitor Control Circuit II
+      [drone]
+      Acolyte II x5
+      Hobgoblin II x5
+      Warrior II x5
+    </fit>
+  </branch>
+</root>

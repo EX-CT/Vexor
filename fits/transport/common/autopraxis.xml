@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>auto-praxis</url>
+
+  <name lang="en">Auto Praxis</name>
+  <name lang="zh">自动导航实践</name>
+
+  <description lang="en">For autopilot cargo hauling</description>
+  <description lang="zh">用于自动导航运货</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Praxis]
+      [low]
+      Damage Control II
+      Reinforced Bulkheads II
+      Reinforced Bulkheads II
+      Reinforced Bulkheads II
+      Reinforced Bulkheads II
+      Inertial Stabilizers II
+      Inertial Stabilizers II
+      [med]
+      Large Azeotropic Restrained Shield Extender
+      Large Azeotropic Restrained Shield Extender
+      Large Azeotropic Restrained Shield Extender
+      Pithum C-Type EM Shield Amplifier
+      Pithum B-Type Thermal Shield Amplifier
+      Pithum B-Type Kinetic Shield Amplifier
+      Pithum A-Type Explosive Shield Amplifier
+      [rig]
+      Large Cargohold Optimization II
+      Large Cargohold Optimization II
+      Large Transverse Bulkhead II
+    </fit>
+  </branch>
+</root>

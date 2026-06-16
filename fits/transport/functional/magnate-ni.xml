@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>magnate-ni</url>
+
+  <name lang="en">Cargo Magnate NI</name>
+  <name lang="zh">护卫舱海富豪</name>
+
+  <description lang="en">Stored in a battleship's frigate escape bay for maximum ammo capacity</description>
+  <description lang="zh">放在战列的护卫逃生舱，能最大化装弹药</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Magnate Navy Issue]
+      [low]
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      [med]
+      Small Cargohold Optimization II
+      Small Cargohold Optimization II
+      Small Cargohold Optimization I
+    </fit>
+  </branch>
+</root>

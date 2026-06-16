@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>slasher</url>
+
+  <name lang="en">Recon Slasher</name>
+  <name lang="zh">侦查伐木</name>
+
+  <description lang="en">Recon Slasher fits, safe to traverse 3 layers</description>
+  <description lang="zh">用于侦查任务的伐木，可安全速通三层</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Slasher]
+      [low]
+      Overdrive Injector System II
+      Overdrive Injector System II
+      [med]
+      Small Shield Extender II
+      Small Shield Extender II
+      5MN Y-T8 Compact Microwarpdrive
+      Medium Shield Extender II
+      [rig]
+      Small Core Defense Field Extender I
+      Small Core Defense Field Extender I
+      Small Core Defense Field Extender I
+    </fit>
+  </branch>
+</root>

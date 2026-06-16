@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>raven</url>
+
+  <name lang="en">Lv4 Raven</name>
+  <name lang="zh">四级乌鸦</name>
+
+  <description lang="en">Lv4 Raven fits, low cost</description>
+  <description lang="zh">四级任务超廉价方案</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Raven]
+      [low]
+      Damage Control II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      [med]
+      Large Shield Extender II
+      Large Shield Extender II
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Missile Guidance Computer II , Missile Precision Script
+      500MN Quad LiF Restrained Microwarpdrive
+      Large Micro Jump Drive
+      [high]
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      [rig]
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      [drone]
+      Hornet I x15
+    </fit>
+  </branch>
+</root>

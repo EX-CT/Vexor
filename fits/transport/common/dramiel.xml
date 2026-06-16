@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>dramiel</url>
+
+  <name lang="en">Travel Dramiel</name>
+  <name lang="zh">赶路小德</name>
+
+  <description lang="en">High-speed transit</description>
+  <description lang="zh">高速赶路</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Dramiel]
+      [low]
+      Inertial Stabilizers II
+      Inertial Stabilizers II
+      Inertial Stabilizers II
+      [med]
+      5MN Quad LiF Restrained Microwarpdrive
+      Small Azeotropic Restrained Shield Extender
+      Small Azeotropic Restrained Shield Extender
+      Medium Shield Extender I
+      [rig]
+      Small Hyperspatial Velocity Optimizer II
+      Small Hyperspatial Velocity Optimizer II
+      Small Hyperspatial Velocity Optimizer II
+    </fit>
+  </branch>
+</root>

@@ -22,7 +22,7 @@ function EquipmentSection({ items, keyName, label, alternativeSelections, t, lan
   t: (text: string | { en: string; zh: string }) => string,
   lang: 'en' | 'zh'
 }) {
-  const shouldMerge = ['high', 'med', 'low', 'rig'].includes(keyName);
+  const shouldMerge = ['high', 'med', 'low', 'rig', 'sub'].includes(keyName);
   
   let displayItems: Array<{ item: FitItem; count: number; originalIndex: number }> = [];
   
@@ -51,20 +51,28 @@ function EquipmentSection({ items, keyName, label, alternativeSelections, t, lan
     displayItems = items.map((item, index) => ({ item, count: 1, originalIndex: index }));
   }
 
-  const getFinalName = (item: FitItem, displayIndex: number) => {
+  const getAltNameOnly = (alt: string) => {
+    const match = alt.match(/^(.+?)\s+x\d+$/i);
+    return match ? match[1].trim() : alt;
+  };
+  const getAltQuantity = (alt: string): number | undefined => {
+    const match = alt.match(/^.+\s+x(\d+)$/i);
+    return match ? parseInt(match[1], 10) : undefined;
+  };
+
+  const getFinalName = (item: FitItem, displayIndex: number): { name: string; quantity?: number } => {
     const selectionKey = `${keyName}-${displayIndex}`;
     const altIndex = alternativeSelections[selectionKey];
     
     if (item.alternatives && altIndex !== undefined && altIndex >= 0 && altIndex < item.alternatives.length) {
       const altPart = item.alternatives[altIndex];
-      const commaIndex = altPart.indexOf(',');
-      if (commaIndex > -1) {
-        return altPart.substring(0, commaIndex).trim();
-      }
-      return altPart;
+      return {
+        name: getAltNameOnly(altPart),
+        quantity: getAltQuantity(altPart) ?? item.quantity,
+      };
     }
     
-    return item.name;
+    return { name: item.name, quantity: item.quantity };
   };
 
   return (
@@ -72,12 +80,12 @@ function EquipmentSection({ items, keyName, label, alternativeSelections, t, lan
       <div className="flex">
         <div className="flex-1 px-3 py-1">
           {displayItems.map(({ item, count }, displayIndex) => {
-            const displayName = getFinalName(item, displayIndex);
-            const sdeItem = getItemByName(displayName);
+            const displayInfo = getFinalName(item, displayIndex);
+            const sdeItem = getItemByName(displayInfo.name);
             const iconUrl = sdeItem ? getItemIconUrlFromSDEItem(sdeItem, 64) : null;
             const equipmentName = sdeItem 
               ? (lang === 'zh' ? (sdeItem.name.zh || sdeItem.name.en) : sdeItem.name.en)
-              : displayName;
+              : displayInfo.name;
             
             const ammoSdeItem = item.ammo ? getItemByName(item.ammo) : null;
             const ammoIconUrl = ammoSdeItem ? getItemIconUrlFromSDEItem(ammoSdeItem, 64) : null;
@@ -101,6 +109,9 @@ function EquipmentSection({ items, keyName, label, alternativeSelections, t, lan
                       <span className="text-xs font-bold text-violet-600 bg-violet-50 px-1 py-0.5 rounded">{count}x</span>
                     )}
                     <span className="text-xs text-gray-800 truncate">{equipmentName}</span>
+                    {displayInfo.quantity && displayInfo.quantity > 1 && !shouldMerge && (
+                      <span className="text-xs font-bold text-violet-600 bg-violet-50 px-1 py-0.5 rounded">x{displayInfo.quantity}</span>
+                    )}
                     {item.offline && (
                       <span className="text-xs text-gray-400">({t({ en: 'offline', zh: '离线' })})</span>
                     )}

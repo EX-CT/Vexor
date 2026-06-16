@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>mdst</url>
+
+  <name lang="en">Minmatar DST</name>
+  <name lang="zh">M族专业强运</name>
+
+  <description lang="en">Certified hardened transport fit</description>
+  <description lang="zh">认证强运配置</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <alert lang="en">Requires cloak trick</alert>
+    <alert lang="zh">请假隐跳</alert>
+
+    <fit version="1">
+      [Mastodon]
+      [low]
+      Damage Control II
+      Power Diagnostic System II
+      Inertial Stabilizers II
+      Inertial Stabilizers II
+      [med]
+      Large Shield Extender II
+      Gistum C-Type Multispectrum Shield Hardener
+      Gistum C-Type Multispectrum Shield Hardener
+      Gistum C-Type Multispectrum Shield Hardener
+      50MN Quad LiF Restrained Microwarpdrive
+      [high]
+      Caldari Navy Cloaking Device
+      [rig]
+      Medium Core Defense Field Extender II
+      Medium Core Defense Field Extender II
+    </fit>
+  </branch>
+</root>

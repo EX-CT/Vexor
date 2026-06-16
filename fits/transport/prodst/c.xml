@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>cdst</url>
+
+  <name lang="en">Caldari DST</name>
+  <name lang="zh">C族专业强运</name>
+
+  <description lang="en">Certified hardened transport fit</description>
+  <description lang="zh">认证强运配置</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <alert lang="en">Requires cloak trick</alert>
+    <alert lang="zh">请假隐跳</alert>
+
+    <fit version="1">
+      [Bustard]
+      [low]
+      Damage Control II
+      Reactor Control Unit II
+      Inertial Stabilizers II
+      [med]
+      Large Shield Extender II
+      Gistum C-Type Multispectrum Shield Hardener
+      Gistum C-Type Multispectrum Shield Hardener
+      50MN Quad LiF Restrained Microwarpdrive
+      Pith X-Type EM Shield Hardener
+      Pith X-Type Explosive Shield Hardener
+      [high]
+      Caldari Navy Cloaking Device
+      [rig]
+      Medium Core Defense Field Extender II
+      Medium Core Defense Field Extender II
+    </fit>
+  </branch>
+</root>

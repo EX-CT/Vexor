@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>venture</url>
+
+  <name lang="en">Rookie Venture</name>
+  <name lang="zh">新人挖矿冲锋</name>
+
+  <description lang="en">Beginner mining</description>
+  <description lang="zh">新人挖矿</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Venture]
+      [low]
+      Mining Laser Upgrade I
+      [med]
+      5MN Y-T8 Compact Microwarpdrive
+      Medium Shield Extender I
+      Eutectic Compact Cap Recharger
+      [high]
+      EP-S Gaussian Scoped Mining Laser
+      EP-S Gaussian Scoped Mining Laser
+      [rig]
+      Small Core Defense Field Extender I
+      Small Core Defense Field Extender I
+      Small Core Defense Field Extender I
+      [drone]
+      Hornet I x2
+      [cargo]
+      Gas Cloud Scoop I x1
+    </fit>
+  </branch>
+</root>

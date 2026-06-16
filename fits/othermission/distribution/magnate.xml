@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>magnate</url>
+
+  <name lang="en">Lv2 Distribution Magnate</name>
+  <name lang="zh">二级物流富豪</name>
+
+  <description lang="en">For Level 2 distribution missions only</description>
+  <description lang="zh">只用于二级物流任务</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Magnate]
+      [low]
+      Type-D Restrained Inertial Stabilizers
+      Type-D Restrained Inertial Stabilizers
+      Type-D Restrained Expanded Cargo
+      Type-D Restrained Expanded Cargo
+      [med]
+      Small Cargohold Optimization I
+      Small Cargohold Optimization I
+      Small Cargohold Optimization I
+      [cargo]
+      Type-D Restrained Expanded Cargo x2
+    </fit>
+  </branch>
+</root>

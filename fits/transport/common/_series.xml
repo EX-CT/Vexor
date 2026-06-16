@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>common</url>
+
+<name lang="en">Common</name>
+<name lang="zh">通用</name>
+
+<description lang="en">Common transport fits</description>
+<description lang="zh">通用运输配置</description>
+</root>

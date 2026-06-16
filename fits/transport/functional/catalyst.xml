@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>salvage-catalyst</url>
+
+  <name lang="en">Salvage Catalyst</name>
+  <name lang="zh">打捞促进</name>
+
+  <description lang="en">Classic beginner salvaging ship</description>
+  <description lang="zh">经典的新手打捞船</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Catalyst]
+      [low]
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      [med]
+      5MN Y-T8 Compact Microwarpdrive == 1MN Y-S8 Compact Afterburner
+      Medium Compact Pb-Acid Cap Battery
+      [high]
+      Salvager I
+      Salvager I
+      Salvager I
+      Salvager I
+      Salvager I
+      Salvager I
+      Salvager I
+      Salvager I
+      [rig]
+      Small Cargohold Optimization I
+      Small Cargohold Optimization I
+      Small Cargohold Optimization I
+    </fit>
+  </branch>
+</root>

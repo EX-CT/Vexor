@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>crucifier-ni</url>
+
+  <name lang="en">Webbing CrucifierNI</name>
+  <name lang="zh">网子海磨难</name>
+
+  <description lang="en">For webbing freighters</description>
+  <description lang="zh">用于货舰网子</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Crucifier Navy Issue]
+      [low]
+      400mm Rolled Tungsten Compact Plates
+      Multispectrum Coating II
+      Inertial Stabilizers I
+      [med]
+      X5 Enduring Stasis Webifier
+      X5 Enduring Stasis Webifier
+      X5 Enduring Stasis Webifier
+      X5 Enduring Stasis Webifier
+      [high]
+      'YF-12a' Compact Small Plasma Smartbomb
+      [rig]
+      Small Trimark Armor Pump II
+      Small Trimark Armor Pump II
+      Small Trimark Armor Pump II
+    </fit>
+  </branch>
+</root>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>rokh</url>
+
+  <name lang="en">Lv4 Rokn</name>
+  <name lang="zh">速刷鹏鲲</name>
+
+  <description lang="en"></description>
+  <description lang="zh">便宜好用，技能3级就行，只建议做速刷任务</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Rokh]
+      [low]
+      Magnetic Field Stabilizer II
+      Magnetic Field Stabilizer II
+      Magnetic Field Stabilizer II
+      Magnetic Field Stabilizer II
+      [med]
+      Large Shield Extender II
+      Large Shield Extender II
+      Large Shield Extender II
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Tracking Computer II , Optimal Range Script == F-12 Enduring Tracking Computer
+      Large Micro Jump Drive
+      [high]
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      425mm Prototype Gauss Gun
+      [rig]
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      Large Core Defense Field Extender I
+      [cargo]
+      Federation Navy Antimatter Charge L x2000
+      Federation Navy Uranium Charge L x2000
+      Federation Navy Thorium Charge L x2000
+    </fit>
+  </branch>
+</root>

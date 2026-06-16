@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>nereus</url>
+
+  <name lang="en">Cloaky Nereus</name>
+  <name lang="zh">假隐跳涅鲁斯</name>
+
+  <description lang="en">14k+ m³ transport fit with cloak trick</description>
+  <description lang="zh">1.4万方+运输方案，假隐跳</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+    <alert lang="en">Gank warning! Extremely dangerous if misused, not recommended</alert>
+    <alert lang="zh">强暴警告，操作不当极度危险，不建议使用</alert>
+
+    <fit version="1">
+      [Nereus]
+      [low]
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      Expanded Cargohold II
+      [med]
+      50MN Quad LiF Restrained Microwarpdrive
+      Medium Shield Extender I
+      Medium Shield Extender I
+      Medium Shield Extender I
+      Medium Shield Extender I
+      [high]
+      Improved Cloaking Device II
+      [rig]
+      Medium Cargohold Optimization I
+      Medium Cargohold Optimization I
+      Medium Cargohold Optimization I
+      [cargo]
+      Inertial Stabilizers II x3
+    </fit>
+  </branch>
+</root>

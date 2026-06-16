@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>distribution</url>
+
+<name lang="en">Distribution Mission</name>
+<name lang="zh">物流任务</name>
+
+<description lang="en">Distribution mission fits</description>
+<description lang="zh">物流任务配置</description>
+</root>

@@ -1,5 +1,13 @@
 import type { FitItem, FitSection } from '../types';
 
+function parseItemLine(input: string): { name: string; quantity?: number } {
+  const match = input.match(/^(.+?)\s+x(\d+)$/i);
+  if (match) {
+    return { name: match[1].trim(), quantity: parseInt(match[2], 10) };
+  }
+  return { name: input };
+}
+
 export function convertFitToEFT(
   fit: FitSection,
   fittingName: string = '',
@@ -14,7 +22,7 @@ export function convertFitToEFT(
   const addItems = (items: FitItem[], sectionKey: string) => {
     if (!items || items.length === 0) return;
 
-    const shouldMerge = ['high', 'med', 'low', 'rig'].includes(sectionKey);
+    const shouldMerge = ['high', 'med', 'low', 'rig', 'sub'].includes(sectionKey);
 
     let displayItems: Array<{ item: FitItem; count: number; originalIndex: number }> = [];
 
@@ -50,25 +58,29 @@ export function convertFitToEFT(
     displayItems.forEach(({ item, count }, displayIndex) => {
       const selectionKey = `${sectionKey}-${displayIndex}`;
       const altIndex = alternativeSelections[selectionKey];
+
       let finalName = item.name;
+      let finalQuantity = item.quantity;
 
       if (item.alternatives && altIndex !== undefined && altIndex >= 0 && altIndex < item.alternatives.length) {
         const altPart = item.alternatives[altIndex];
-        const commaIndex = altPart.indexOf(',');
-        if (commaIndex > -1) {
-          finalName = altPart.substring(0, commaIndex).trim();
-        } else {
-          finalName = altPart;
-        }
+        const parsed = parseItemLine(altPart);
+        finalName = parsed.name;
+        finalQuantity = parsed.quantity ?? item.quantity;
       }
 
-      const baseLine = finalName;
-
       for (let i = 0; i < count; i++) {
-        let line = baseLine;
+        let line = finalName;
+
+        if (finalQuantity && finalQuantity > 1) {
+          line += ` x${finalQuantity}`;
+        }
 
         if (item.ammo) {
           line += `, ${item.ammo}`;
+          if (item.ammoQuantity && item.ammoQuantity > 1) {
+            line += ` x${item.ammoQuantity}`;
+          }
         }
 
         if (item.offline) {
@@ -94,11 +106,24 @@ export function convertFitToEFT(
   lines.push('');
   lines.push('');
 
+  // Drone
   if (fit.equipment.drone && fit.equipment.drone.length > 0) {
-    fit.equipment.drone.forEach(item => {
-      let line = item.name;
-      if (item.quantity && item.quantity > 1) {
-        line += ` x${item.quantity}`;
+    fit.equipment.drone.forEach((item, index) => {
+      const selectionKey = `drone-${index}`;
+      const altIndex = alternativeSelections[selectionKey];
+
+      let finalName = item.name;
+      let finalQuantity = item.quantity;
+
+      if (item.alternatives && altIndex !== undefined && altIndex >= 0 && altIndex < item.alternatives.length) {
+        const parsed = parseItemLine(item.alternatives[altIndex]);
+        finalName = parsed.name;
+        finalQuantity = parsed.quantity ?? item.quantity;
+      }
+
+      let line = finalName;
+      if (finalQuantity && finalQuantity > 1) {
+        line += ` x${finalQuantity}`;
       }
       lines.push(line);
     });
@@ -107,16 +132,30 @@ export function convertFitToEFT(
   lines.push('');
   lines.push('');
 
+  // Cargo
   if (fit.equipment.cargo && fit.equipment.cargo.length > 0) {
-    fit.equipment.cargo.forEach(item => {
-      let line = item.name;
-      if (item.quantity && item.quantity > 1) {
-        line += ` x${item.quantity}`;
+    fit.equipment.cargo.forEach((item, index) => {
+      const selectionKey = `cargo-${index}`;
+      const altIndex = alternativeSelections[selectionKey];
+
+      let finalName = item.name;
+      let finalQuantity = item.quantity;
+
+      if (item.alternatives && altIndex !== undefined && altIndex >= 0 && altIndex < item.alternatives.length) {
+        const parsed = parseItemLine(item.alternatives[altIndex]);
+        finalName = parsed.name;
+        finalQuantity = parsed.quantity ?? item.quantity;
+      }
+
+      let line = finalName;
+      if (finalQuantity && finalQuantity > 1) {
+        line += ` x${finalQuantity}`;
       }
       lines.push(line);
     });
   }
 
+  // Implants
   if (fit.equipment.imp && fit.equipment.imp.length > 0) {
     lines.push('');
     lines.push('');
@@ -124,16 +163,11 @@ export function convertFitToEFT(
     fit.equipment.imp.forEach((item, index) => {
       const selectionKey = `imp-${index}`;
       const altIndex = alternativeSelections[selectionKey];
+
       let finalName = item.name;
 
       if (item.alternatives && altIndex !== undefined && altIndex >= 0 && altIndex < item.alternatives.length) {
-        const altPart = item.alternatives[altIndex];
-        const commaIndex = altPart.indexOf(',');
-        if (commaIndex > -1) {
-          finalName = altPart.substring(0, commaIndex).trim();
-        } else {
-          finalName = altPart;
-        }
+        finalName = parseItemLine(item.alternatives[altIndex]).name;
       }
 
       lines.push(finalName);

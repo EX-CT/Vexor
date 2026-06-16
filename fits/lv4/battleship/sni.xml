@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <url>sni</url>
+
+  <name lang="en">Lv4 SNI</name>
+  <name lang="zh">四级海毒蝎</name>
+
+  <description lang="zh">四级任务廉价高坦度方案</description>
+  <description lang="en">Lv4 SNI fits</description>
+
+  <branch>
+    <bname lang="en">Main</bname>
+    <bname lang="zh">主线</bname>
+
+    <fit version="1">
+      [Scorpion Navy Issue]
+      [low]
+      Damage Control II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      Ballistic Control System II
+      [med]
+      Multispectrum Shield Hardener II
+      Multispectrum Shield Hardener II
+      Missile Guidance Computer II , Missile Precision Script
+      Large Shield Extender II
+      Large Shield Extender II
+      Large Shield Extender II == Caldari Navy Large Shield Extender
+      Large Shield Extender II == Caldari Navy Large Shield Extender
+      Large Micro Jump Drive
+      [high]
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      Cruise Missile Launcher II
+      [rig]
+      Large Warhead Rigor Catalyst II
+      Large Core Defense Field Extender II
+      Large Core Defense Field Extender II
+      [drone]
+      Warrior I x15
+    </fit>
+  </branch>
+</root>

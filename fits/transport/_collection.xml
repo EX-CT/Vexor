@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<url>transport</url>
+
+<name lang="en">Transport</name>
+<name lang="zh">运输</name>
+
+<description lang="zh">各类运输跑路配置</description>
+<description lang="en">Various transport and travel fits</description>
+
+</root>
