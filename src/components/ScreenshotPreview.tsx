@@ -178,21 +178,21 @@ export function ScreenshotPreview({
             />
           )}
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-1 text-xs">
-              {collectionName && <span className="text-violet-800">{collectionName}</span>}
-              {collectionName && seriesName && <span className="text-violet-500">/</span>}
-              {seriesName && <span className="text-violet-800">{seriesName}</span>}
-              {(collectionName || seriesName) && <span className="text-violet-500">/</span>}
-              <span className="text-violet-900 font-medium truncate">{t(currentConfig.name)}</span>
+            <div className="flex items-center gap-1 text-xs whitespace-nowrap overflow-hidden">
+              {collectionName && <span className="text-violet-800 truncate min-w-0">{collectionName}</span>}
+              {collectionName && seriesName && <span className="text-violet-500 flex-shrink-0">/</span>}
+              {seriesName && <span className="text-violet-800 truncate min-w-0">{seriesName}</span>}
+              {(collectionName || seriesName) && <span className="text-violet-500 flex-shrink-0">/</span>}
+              <span className="text-violet-900 font-medium truncate min-w-0">{t(currentConfig.name)}</span>
             </div>
-            <div className="flex items-center gap-1 mt-1 text-xs">
-              <span className="text-violet-700 font-medium">
+            <div className="flex items-center gap-1 mt-1 text-xs whitespace-nowrap overflow-hidden">
+              <span className="text-violet-700 font-medium truncate min-w-0">
                 {lang === 'zh' ? (shipSdeItem?.name.zh || shipName) : shipName}
               </span>
-              <span className="text-violet-500">&gt;</span>
-              <span className="text-violet-800">{t(currentBranch.name)}</span>
-              <span className="text-violet-500">&gt;</span>
-              <span className="text-violet-700">{t({ en: 'Ver', zh: '版本' })} {selectedFitIndex + 1}</span>
+              <span className="text-violet-500 flex-shrink-0">&gt;</span>
+              <span className="text-violet-800 truncate min-w-0">{t(currentBranch.name)}</span>
+              <span className="text-violet-500 flex-shrink-0">&gt;</span>
+              <span className="text-violet-700 flex-shrink-0">{t({ en: 'Ver', zh: '版本' })} {selectedFitIndex + 1}</span>
             </div>
           </div>
         </div>

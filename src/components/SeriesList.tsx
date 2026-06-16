@@ -89,7 +89,7 @@ export function SeriesList({ collection, onSelect, onBack }: SeriesListProps) {
                   {shipIcons.map((icon, i) => (
                     <div
                       key={i}
-                      className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-white dark:border-gray-800 overflow-hidden shadow-sm"
+                      className={`w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-white dark:border-gray-800 overflow-hidden shadow-sm ${i >= 2 ? 'hidden md:block' : ''}`}
                       title={icon.name}
                     >
                       <img
